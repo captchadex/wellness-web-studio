@@ -85,16 +85,16 @@ export function Services() {
               </CardHeader>
 
               <CardContent className="flex flex-col justify-between flex-1">
-                <Separator className="mb-6" />
-                <ul className="space-y-3 text-sm text-foreground/80">
-                  {s.bullets.map(b => (
-                    <li key={b} className="flex gap-3">
-                      <span className="mt-1 inline-block h-2 w-2 rounded-full bg-emerald-400/70" />
-                      <span>{b}</span>
-                    </li>
-                  ))}
-                </ul>
-
+                <div>
+                  <Separator className="mb-4" />
+                  <ul className="space-y-3 text-sm text-foreground/80 list-disc marker:text-emerald-300 ml-4">
+                    {s.bullets.map(b => (
+                      <li key={b}>
+                        <span>{b}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
                 <div className="mt-8">
                   <Button
                     variant={s.featured ? 'default' : 'outline'}
